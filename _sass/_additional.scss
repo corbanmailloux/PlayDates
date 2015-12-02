@@ -1,0 +1,42 @@
+/*
+ * Insert any additional CSS/SCSS we need.
+ */
+/*
+// Remove the gradient of the navbar
+.navbar {
+    background-color: #654e2f; 
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
+}
+*/
+
+body { 
+    padding-top: 70px; // Padding for the fixed navbar
+    padding-bottom: 30px; // Keep buttons off the bottom of the page
+}
+
+.page-header {
+    margin-top: 0; // Too big without this
+}
+
+
+// Circle buttons
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+}
+
+.btn-circle-glyph {
+    padding-top: 11px;
+}
