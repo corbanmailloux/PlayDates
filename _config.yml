@@ -9,7 +9,7 @@ title: PlayDates
 description: > # this means to ignore newlines until "baseurl:"
   PlayDates is a service to allow your pets to hook up with play date partners!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://paw.rit.pics" # the base hostname & protocol for your site
+url: "https://paw.rit.pics" # the base hostname & protocol for your site
 permalink: pretty # to remove the ".html" extension when serving file
 
 # Limit what is hosted on the site.
