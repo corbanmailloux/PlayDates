@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-circle img-thumbnail center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h1 class="h4">{{ page.animal.name }} <small class="additional-about-small">{{ page.animal.age }}; {{ page.animal.breed }}</small></h1>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    {{ page.animal.tagline }}
+                                </p>
+                                <p>
+                                    <strong>Likes:</strong> {{ page.animal.likes }}
+                                </p>
+                                <p>
+                                    <strong>Dislikes:</strong> {{ page.animal.dislikes }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <a href="/1" class="btn btn-danger btn-circle center-block">
+                                    <span class="glyphicon glyphicon-remove center-block btn-circle-glyph-cheat"></span>
+                                </a>
+                            </div>
+                            <div class="col-xs-2">
+                                <!-- dummy -->
+                            </div>
+                            <div class="col-xs-5">
+                                <button type="button" class="btn btn-success btn-circle center-block" data-toggle="modal" data-target="#matchModal">
+                                    <span class="glyphicon glyphicon-ok center-block"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Match modal -->
+            <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="matchModalLabel">It's a match!</h4>
+                        </div>
+
+                        <form action="/">
+                            <div class="modal-body">
+                                <p>
+                                    You and {{ page.animal.name }} have liked each other!
+                                </p>
+
+                                <div class="form-group">
+                                    <label for="message">Message to {{ page.animal.name }}:</label>
+                                    <textarea rows="3" cols="50" class="form-control" id="message" placeholder="(Make it good!)"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Ignore</button>
+                                <button type="submit" class="btn btn-primary">Send a message to {{ page.animal.name }}!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
