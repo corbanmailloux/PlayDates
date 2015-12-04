@@ -1,72 +1,13 @@
 ---
 title: Rufus
+layout: matches
+
+animal:
+  name: "Rufus"
+  img: "/images/dogs/corgi1.png"
+  age: "3 years old"
+  breed: "Welsh Corgi"
+  tagline: "Rufus is a well-mannered, playful dude."
+  likes: "chewing on new leather shoes, Greenies, and rolling in mud puddles after a bath."
+  dislikes: "vacuum cleaners, cats 🐈, and men with beards."
 ---
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <img src="/images/dogs/corgi1.png" alt="Rufus' profile image" class="img-responsive img-circle img-thumbnail center-block">
-        </div>
-        <div class="col-xs-12 col-sm-8">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="h4">Rufus <small class="additional-about-small">3 years old; Welsh Corgi</small></h1>
-                </div>
-                <div class="panel-body">
-                    <p>
-                        Rufus is a well-mannered, playful dude.
-                    </p>
-                    <p>
-                        <strong>Likes:</strong> chewing on new leather shoes, Greenies, and rolling in mud puddles after a bath.
-                    </p>
-                    <p>
-                        <strong>Dislikes:</strong> vacuum cleaners, cats 🐈, and men with beards.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-5">
-                    <a href="/1" class="btn btn-danger btn-circle center-block">
-                        <span class="glyphicon glyphicon-remove center-block btn-circle-glyph-cheat"></span>
-                    </a>
-                </div>
-                <div class="col-xs-2">
-                    <!-- dummy -->
-                </div>
-                <div class="col-xs-5">
-                    <button type="button" class="btn btn-success btn-circle center-block" data-toggle="modal" data-target="#matchModal">
-                        <span class="glyphicon glyphicon-ok center-block"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Match modal -->
-<div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="matchModalLabel">It's a match!</h4>
-            </div>
-
-            <form action="/">
-                <div class="modal-body">
-                    <p>
-                        You and Rufus have liked each other!
-                    </p>
-
-                    <div class="form-group">
-                        <label for="message">Message to Rufus:</label>
-                        <textarea rows="3" cols="50" class="form-control" id="message" placeholder="(Make it good!)"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Ignore</button>
-                    <button type="submit" class="btn btn-primary">Send a message to Rufus!</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
