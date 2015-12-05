@@ -13,9 +13,21 @@ url: "https://paw.rit.pics" # the base hostname & protocol for your site
 permalink: pretty # to remove the ".html" extension when serving file
 
 # Limit what is hosted on the site.
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: 
+  - "CNAME"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "PlayDates.sublime-project"
+  - "PlayDates.sublime-workspace"
 
 defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "dogs"
+    values:
+      layout: "matches"
   -
     scope:
       path: "" # an empty string here means all files in the project
@@ -24,3 +36,8 @@ defaults:
 
 theme-bg: #654e2f
 theme-fg: #df4620
+
+collections:
+  dogs:
+    output: true
+    permalink: /:path/
