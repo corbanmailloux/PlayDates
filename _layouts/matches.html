@@ -1,82 +1,76 @@
-<!DOCTYPE html>
-<html>
-    {% include head.html %}
-    <body>
-        {% include header.html %}
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-circle img-thumbnail center-block">
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h1 class="h4">{{ page.animal.name }} - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                {{ page.animal.tagline }}
-                            </p>
-                            <p>
-                                <strong>Likes:</strong> {{ page.animal.likes }}
-                            </p>
-                            <p>
-                                <strong>Dislikes:</strong> {{ page.animal.dislikes }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-5">
-                            <a href="/{{ page.next }}" class="btn btn-danger btn-circle center-block">
-                                <span class="glyphicon glyphicon-remove center-block btn-circle-glyph-cheat"></span>
-                            </a>
-                        </div>
-                        <div class="col-xs-2">
-                            <!-- dummy -->
-                        </div>
-                        <div class="col-xs-5">
-                            {% if page.match %}
-                            <button type="button" class="btn btn-success btn-circle center-block" data-toggle="modal" data-target="#matchModal" data-keyboard="false" data-backdrop="static">
-                                <span class="glyphicon glyphicon-ok center-block"></span>
-                            </button>
-                            {% else %}
-                            <a href="/{{ page.next }}" class="btn btn-success btn-circle center-block">
-                                <span class="glyphicon glyphicon-ok center-block btn-circle-glyph-cheat"></span>
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-circle img-thumbnail center-block">
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="h4">{{ page.animal.name }} - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
             </div>
-            {{ content }}{% comment %} Just in case. {% endcomment %}
-
-            <!-- Match modal -->
-            <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="matchModalLabel">It's a match!</h4>
-                        </div>
-                        <form action="/{{ page.next }}">
-                            <div class="modal-body">
-                                <p>
-                                    You and {{ page.animal.name }} have liked each other!
-                                </p>
-
-                                <div class="form-group">
-                                    <label for="message">Message to {{ page.animal.name }}:</label>
-                                    <textarea rows="3" cols="50" class="form-control" id="message" placeholder="(Make it good!)"></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="/{{ page.next }}" class="btn btn-default">Ignore</a>
-                                <button type="submit" class="btn btn-primary">Send a message to {{ page.animal.name }}!</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="panel-body">
+                <p>
+                    {{ page.animal.tagline }}
+                </p>
+                <p>
+                    <strong>Likes:</strong> {{ page.animal.likes }}
+                </p>
+                <p>
+                    <strong>Dislikes:</strong> {{ page.animal.dislikes }}
+                </p>
             </div>
         </div>
-        {% include footer.html %}
-    </body>
-</html>
+        <div class="row">
+            <div class="col-xs-5">
+                <a href="/{{ page.next }}" class="btn btn-danger btn-circle center-block">
+                    <span class="glyphicon glyphicon-remove center-block btn-circle-glyph-cheat"></span>
+                </a>
+            </div>
+            <div class="col-xs-2">
+                <!-- dummy -->
+            </div>
+            <div class="col-xs-5">
+                {% if page.match %}
+                <button type="button" class="btn btn-success btn-circle center-block" data-toggle="modal" data-target="#matchModal" data-keyboard="false" data-backdrop="static">
+                    <span class="glyphicon glyphicon-ok center-block"></span>
+                </button>
+                {% else %}
+                <a href="/{{ page.next }}" class="btn btn-success btn-circle center-block">
+                    <span class="glyphicon glyphicon-ok center-block btn-circle-glyph-cheat"></span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{{ content }}{% comment %} Just in case. {% endcomment %}
+
+<!-- Match modal -->
+<div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="matchModalLabel">It's a match!</h4>
+            </div>
+            <form action="/{{ page.next }}">
+                <div class="modal-body">
+                    <p>
+                        You and {{ page.animal.name }} have liked each other!
+                    </p>
+
+                    <div class="form-group">
+                        <label for="message">Message to {{ page.animal.name }}:</label>
+                        <textarea rows="3" cols="50" class="form-control" id="message" placeholder="(Make it good!)"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="/{{ page.next }}" class="btn btn-default">Ignore</a>
+                    <button type="submit" class="btn btn-primary">Send a message to {{ page.animal.name }}!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
