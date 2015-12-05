@@ -7,10 +7,10 @@
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li {% if page.url == "/" %} class="active" {% endif %}>
-                    <a href="/">Match?</a>
+                <li {% unless page.url == "/profile/" %}class="active"{% endunless %}>
+                    <a href="/">Matches</a>
                 </li>
-                <li {% if page.url == "/profile/" %} class="active" {% endif %}>
+                <li {% if page.url == "/profile/" %}class="active"{% endif %}>
                     <a href="/profile">Paw-file</a>
                 </li>
             </ul>
