@@ -1,3 +1,37 @@
 ---
 title: My Paw-file
+layout: default
+
+animal:
+  name: "Moose"
+  img: "/images/dogs/freckles.jpg"
+  age: "3 months old"
+  breed: "Corgi"
+  tagline: ""
+  likes: ""
+  dislikes: ""
 ---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-circle img-thumbnail center-block">
+    </div>
+    <div class="col-xs-12 col-sm-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="h4">{{ page.animal.name }} - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    {{ page.animal.tagline }}
+                </p>
+                <p>
+                    <strong>Likes:</strong> {{ page.animal.likes }}
+                </p>
+                <p>
+                    <strong>Dislikes:</strong> {{ page.animal.dislikes }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
