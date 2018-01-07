@@ -4,7 +4,7 @@ layout: default
 
 <div class="row">
     <div class="col-xs-12 col-sm-4">
-        <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-circle img-thumbnail center-block">
+        <img src="{{ page.animal.img }}" alt="{{ page.animal.name }}'s profile image" class="img-responsive img-thumbnail center-block">
     </div>
     <div class="col-xs-12 col-sm-8">
         <div class="panel panel-primary">
@@ -16,10 +16,28 @@ layout: default
                     {{ page.animal.tagline }}
                 </p>
                 <p>
-                    <strong>Likes:</strong> {{ page.animal.likes }}
+                    <strong>Nicknames</strong>
+                    <ul>
+                      {% for nickname in page.animal.nicknames %}
+                        <li>{{ nickname }}</li>
+                      {% endfor %}
+                    </ul>
                 </p>
                 <p>
-                    <strong>Dislikes:</strong> {{ page.animal.dislikes }}
+                    <strong>Likes</strong>
+                    <ul>
+                      {% for like in page.animal.likes %}
+                        <li>{{ like }}</li>
+                      {% endfor %}
+                    </ul>
+                </p>
+                <p>
+                    <strong>Dislikes</strong>
+                    <ul>
+                      {% for dislike in page.animal.dislikes %}
+                        <li>{{ dislike }}</li>
+                      {% endfor %}
+                    </ul>
                 </p>
             </div>
         </div>
