@@ -14,5 +14,9 @@ layout: default
             </div>
         </a>
     </div>
+  {% assign loopindex = forloop.index0 | modulo: 3 %}
+  {% if loopindex == 2 %}
+    <div class="clearfix"></div>
+  {% endif %}
   {% endfor %}
 </div>
