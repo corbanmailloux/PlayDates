@@ -9,7 +9,7 @@ layout: default
     <div class="col-xs-12 col-sm-8">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h1 class="h4">{{ page.animal.name }} - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
+                <h1 class="h4"><strong>{{ page.animal.name }}</strong> - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
             </div>
             <div class="panel-body">
                 <p>
@@ -24,7 +24,7 @@ layout: default
                     </ul>
                 </p>
                 <p>
-                    <strong>Likes</strong>
+                    <strong>👍 Likes 👍</strong>
                     <ul>
                       {% for like in page.animal.likes %}
                         <li>{{ like }}</li>
@@ -32,7 +32,7 @@ layout: default
                     </ul>
                 </p>
                 <p>
-                    <strong>Dislikes</strong>
+                    <strong>👎 Dislikes 👎</strong>
                     <ul>
                       {% for dislike in page.animal.dislikes %}
                         <li>{{ dislike }}</li>
