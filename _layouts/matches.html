@@ -9,7 +9,14 @@ layout: default
     <div class="col-xs-12 col-sm-8">
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h1 class="h4"><strong>{{ page.animal.name }}</strong> - {{ page.animal.age }}; {{ page.animal.breed }}</h1>
+                <h1 class="h4">
+                    <strong>{{ page.animal.name }}</strong> - {{ page.animal.age }}; {{ page.animal.breed }}
+                  {% if page.animal.sex == "female" %}
+                    <i class="pull-right" title="Female">♀</i>
+                  {% elsif page.animal.sex == "male" %}
+                    <i class="pull-right" title="Male">♂</i>
+                  {% endif %}
+                </h1>
             </div>
             <div class="panel-body">
                 <p>
