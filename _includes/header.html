@@ -7,7 +7,7 @@
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li {% if page.url != "/profile/" or page.url != "/profiles/" %}class="active"{% endif %}>
+                <li {% if page.url != "/profile/" and page.url != "/profiles/" %}class="active"{% endif %}>
                     <a href="/">Matches</a>
                 </li>
                 <li {% if page.url == "/profiles/" %}class="active"{% endif %}>
