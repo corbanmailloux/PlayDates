@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="row">
+  {% for dog_page in site.dogs %}
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="{{ dog_page.url }}" class="thumbnail">
+            <img src="{{ dog_page.animal.img }}" alt="{{ dog_page.animal.name }}'s profile image">
+            <div class="caption">
+                <h3>{{ dog_page.animal.name }}</h3>
+                <p>{{ dog_page.animal.age }} - {{ dog_page.animal.breed }}</p>
+                <p>{{ dog_page.animal.tagline }}</p>
+            </div>
+        </a>
+    </div>
+  {% endfor %}
+</div>
