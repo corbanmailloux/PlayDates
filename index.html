@@ -4,7 +4,7 @@ layout: default
 
 <div class="row">
   {% for dog_page in site.dogs %}
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 col-sm-4">
         <a href="{{ dog_page.url }}" class="thumbnail">
             <img src="{{ dog_page.animal.img }}" alt="{{ dog_page.animal.name }}'s profile image">
             <div class="caption">
