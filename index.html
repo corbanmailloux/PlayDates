@@ -8,7 +8,14 @@ layout: default
         <a href="{{ dog_page.url }}" class="thumbnail">
             <img src="{{ dog_page.animal.img }}" alt="{{ dog_page.animal.name }}'s profile image">
             <div class="caption">
-                <h3>{{ dog_page.animal.name }}</h3>
+                <h3>
+                    {{ dog_page.animal.name }}
+                  {% if dog_page.animal.sex == "female" %}
+                    <i class="pull-right" title="Female">♀</i>
+                  {% elsif dog_page.animal.sex == "male" %}
+                    <i class="pull-right" title="Male">♂</i>
+                  {% endif %}
+                </h3>
                 <p>{{ dog_page.animal.age }} - {{ dog_page.animal.breed }}</p>
                 <p>{{ dog_page.animal.tagline }}</p>
             </div>
