@@ -7,11 +7,14 @@
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li {% unless page.url == "/profile/" %}class="active"{% endunless %}>
+                <li {% unless page.url == "/profile/" or page.url == "/profiles" %}class="active"{% endunless %}>
                     <a href="/">Matches</a>
                 </li>
+                <li {% if page.url == "/profiles/" %}class="active"{% endif %}>
+                    <a href="/profiles">All Paw-files</a>
+                </li>
                 <li {% if page.url == "/profile/" %}class="active"{% endif %}>
-                    <a href="/profile">Paw-file</a>
+                    <a href="/profile">My Paw-file</a>
                 </li>
             </ul>
         </div>
