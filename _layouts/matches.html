@@ -16,10 +16,28 @@ layout: default
                     {{ page.animal.tagline }}
                 </p>
                 <p>
-                    <strong>Likes:</strong> {{ page.animal.likes }}
+                    <strong>Nicknames</strong>
+                    <ul>
+                      {% for nickname in page.animal.nicknames %}
+                        <li>{{ nickname }}</li>
+                      {% endfor %}
+                    </ul>
                 </p>
                 <p>
-                    <strong>Dislikes:</strong> {{ page.animal.dislikes }}
+                    <strong>Likes</strong>
+                    <ul>
+                      {% for like in page.animal.likes %}
+                        <li>{{ like }}</li>
+                      {% endfor %}
+                    </ul>
+                </p>
+                <p>
+                    <strong>Dislikes</strong>
+                    <ul>
+                      {% for dislike in page.animal.dislikes %}
+                        <li>{{ dislike }}</li>
+                      {% endfor %}
+                    </ul>
                 </p>
             </div>
         </div>
